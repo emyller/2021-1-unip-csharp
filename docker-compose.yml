@@ -2,5 +2,6 @@ version: '3.9'
 services:
   app:
     image: mcr.microsoft.com/dotnet/sdk:5.0
+    working_dir: /src
     volumes:
-      - ./:/src:rw
+      - ./src:/src:rw
