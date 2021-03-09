@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# This will run any command in an application container.
+# If no command is given, it runs the application from docker-compose.yml.
+
+SCRIPT=$(realpath $0)
+ROOT=$(realpath $(dirname $SCRIPT)/../)
+APP_NAME="app"
+DOCKER_ENTRYPOINT=${DOCKER_ENTRYPOINT+"--entrypoint '$DOCKER_ENTRYPOINT'"}
+OPT_SERVICE_PORTS=$([ $# -eq 0 ] && echo --service-ports)
+COMPOSE_RUN_OPTIONS=${COMPOSE_RUN_OPTIONS:-"$DOCKER_ENTRYPOINT $OPT_SERVICE_PORTS"}
+docker-compose -f $ROOT/docker-compose.yml run --rm $COMPOSE_RUN_OPTIONS $APP_NAME "$@"
