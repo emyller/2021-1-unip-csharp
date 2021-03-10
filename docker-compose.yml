@@ -5,3 +5,4 @@ services:
     working_dir: /src
     volumes:
       - ./src:/src:rw
+    command: dotnet run
