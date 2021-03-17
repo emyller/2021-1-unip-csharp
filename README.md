@@ -4,10 +4,15 @@ Este projeto foi criado para fins de aprendizado durante a extensão do curso de
 Análise e Desenvolvimento de Sistemas da UNIP.
 
 
+## O que está incluso
+
+- _Software Development Kit_ do framework Microsoft .NET.
+- Compilador C#.
+
+
 ## Requerimentos
 
-- É necessário instalar e executar o [Docker][] para usar containers já com
-  .NET/C# pré-instalados.
+- É necessário instalar e executar o [Docker][].
 - Para contribuir ao código, é necessário usar [Git][].
 - Linux. Mas com Docker, também é possível rodar no Windows (versão Pro).
 
