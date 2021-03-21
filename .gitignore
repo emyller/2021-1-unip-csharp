@@ -1,2 +1,6 @@
+# Ambiente local
+_local
+
+# .NET
 src/bin
 src/obj

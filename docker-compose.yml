@@ -5,4 +5,17 @@ services:
     working_dir: /src
     volumes:
       - ./src:/src:rw
+    depends_on:
+      - database
     command: dotnet run
+
+  database:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    volumes:
+      - ./_local/database:/var/opt/mssql:rw
+    ports: [1433:1433]  # Exporta portas para uso com ferramentas externas
+    user: root
+    environment:
+      ACCEPT_EULA: 'Y'
+      MSSQL_SA_PASSWORD: '#Secret0#'
+      MSSQL_PID: Developer  # Licença gratuita para desenvolvimento

@@ -8,6 +8,7 @@ Análise e Desenvolvimento de Sistemas da UNIP.
 
 - _Software Development Kit_ do framework Microsoft .NET.
 - Compilador C#.
+- Microsoft SQL Server 2019
 
 
 ## Requerimentos
