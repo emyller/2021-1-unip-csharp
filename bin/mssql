@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Este script é somente um atalho para o programa 'dotnet' na imagem Docker
+# original da Microsoft.
+
+SCRIPT=$(realpath $0)
+ROOT=$(realpath $(dirname $SCRIPT)/../)
+APP_NAME='database' $ROOT/bin/run $@
